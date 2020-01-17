@@ -22,3 +22,7 @@ def pets_sold(pet_shop)
   return sold = pet_shop[:admin][:pets_sold]
 end
   # test checks if function returns new value which +/- of @et sale.
+
+  def increase_pets_sold(pet_shop)
+    new_sold = pet_shop[:admin][:pets_sold]
+  end
