@@ -24,12 +24,12 @@ end
   # test checks if function returns new value of number of pets sold by entering into an array within an array.
 
   def increase_pets_sold(pet_shop, num)
-      pet_shop[:admin][:pets_sold]+=(num)
+      return pet_shop[:admin][:pets_sold]+=(num)
   end
   # tests checks if function returns a new value that reflects an increase in pet sales.
 
-def stock_count(return_6)
-  return 6
+def stock_count(count)
+  return count[:pets].count
 end
   # tests returns value
 
