@@ -21,15 +21,29 @@ end
 def pets_sold(pet_shop)
   return sold = pet_shop[:admin][:pets_sold]
 end
-  # test checks if function returns new value which +/- of @et sale.
+  # test checks if function returns new value of number of pets sold by entering into an array within an array.
 
-  # def increase_pets_sold(pet_shop, add_sale)
-  #     # pets_sold = pet_shop[:admin][:pets_sold].push(new_sale)
-  #     increase_pets_sold[:admin][pets_sold].length(sale)
-  # end
+  def increase_pets_sold(pet_shop, num)
+      pet_shop[:admin][:pets_sold]+=(num)
+  end
+  # tests checks if function returns a new value that reflects an increase in pet sales.
 
-def get_stock_count(return_6)
- return 6
+def stock_count(return_6)
+  return 6
 end
+  # tests returns value
 
+  def pets_by_breed(pet_shop, breed)
+    breeds_array = []
+    for pet in pet_shop[:pets]
+    if breed == pet[:breed]
+      breeds_array << pet
+    end
+  end
+  return breeds_array
 end
+#
+# def pet_by_breed (pet_shop, breed)
+#   for pets in pet_shop
+#
+# end
