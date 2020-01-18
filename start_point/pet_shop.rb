@@ -28,8 +28,8 @@ end
   end
 #     # tests checks if function returns a new value that reflects an increase in pet sales.
 #
-  def stock_count(count)
-    return count[:pets].count
+  def stock_count(stock_count)
+    return stock_count[:pets].count
   end
 #     # tests returns value
 #
@@ -91,9 +91,20 @@ end
   #     return count
   # end
 
-  def customer_cash(customers, cash)
-    count = customer_cash[:customer][0][:cash].count
+  def customer_cash(customer)
+    return customer[:cash]
   end
+
+
+
+
+
+
+  #
+   def customer_pet_count(customer)
+     return customer[:pets].count
+   end
+
 
 
 # # end
