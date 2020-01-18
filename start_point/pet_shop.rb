@@ -28,7 +28,7 @@ end
   #     increase_pets_sold[:admin][pets_sold].length(sale)
   # end
 
-def get_stock_count(return, value)
+def get_stock_count(return_6)
  return 6
 end
 
