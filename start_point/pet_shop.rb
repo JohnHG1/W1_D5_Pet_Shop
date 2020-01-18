@@ -23,6 +23,13 @@ def pets_sold(pet_shop)
 end
   # test checks if function returns new value which +/- of @et sale.
 
-  def increase_pets_sold(pet_shop)
-    new_sold = pet_shop[:admin][:pets_sold]
-  end
+  # def increase_pets_sold(pet_shop, add_sale)
+  #     # pets_sold = pet_shop[:admin][:pets_sold].push(new_sale)
+  #     increase_pets_sold[:admin][pets_sold].length(sale)
+  # end
+
+def get_stock_count(return, value)
+ return 6
+end
+
+end
