@@ -8,9 +8,9 @@ class TestPetShop < Minitest::Test
 
   def setup
 
-    @customers = [
+    @customers = [  # global object // array object
       {
-        name: "Alice",
+        name: "Alice",  #hash array with key in left and value on right
         pets: [],
         cash: 1000
       },
@@ -80,7 +80,7 @@ class TestPetShop < Minitest::Test
     }
   end
 
-  def test_pet_shop_name
+  def test_shop_name #defining method name describing what I am trying to do with test
     name = pet_shop_name(@pet_shop)
     assert_equal("Camelot of Pets", name)
   end
@@ -119,24 +119,24 @@ class TestPetShop < Minitest::Test
   end
 
   def test_all_pets_by_breed__found
-    pets = pets_by_breed(@pet_shop, "British Shorthair")
-    assert_equal(2, pets.count)
+    pet = pets_by_breed(@pet_shop, "British Shorthair")
+    assert_equal(2, pet.count)
   end
 
-  # def test_all_pets_by_breed__not_found
-  #   pets = pets_by_breed(@pet_shop, "Dalmation")
-  #   assert_equal(0, pets.count)
-  # end
+  def test_all_pets_by_breed__not_found
+    pets = pets_by_breed(@pet_shop, "Dalmation")
+    assert_equal(0, pets.count)
+  end
 
-  # def test_find_pet_by_name__returns_pet
-  #   pet = find_pet_by_name(@pet_shop, "Arthur")
-  #   assert_equal("Arthur", pet[:name])
-  # end
+  def test_find_pet_by_name__returns_pet
+    pet = find_pet_by_name(@pet_shop, "Arthur")
+    assert_equal("Arthur", pet[:name])
+  end
 
-  # def test_find_pet_by_name__returns_nil
-  #   pet = find_pet_by_name(@pet_shop, "Fred")
-  #   assert_nil(pet)
-  # end
+  def test_find_pet_by_name__returns_nil
+    pet = find_pet_by_name(@pet_shop, "Fred")
+    assert_nil(pet)
+  end
 
   # def test_remove_pet_by_name
   #   remove_pet_by_name(@pet_shop, "Arthur")
