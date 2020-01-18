@@ -57,6 +57,7 @@ end
 #   #   #As function above so blanked out.
 #
   def find_pet_by_name(pet_shop, pet_name)
+    breeds_array = []
     for pet in pet_shop[:pets]
       if pet_name == pet[:name]
         return pet
@@ -64,24 +65,35 @@ end
     end
     return breeds_array
   end
-#   # def pet_by_breed (pet_shop, name) using a for loop function goes through hashes checking for "string" and stores finding, then stops at end of array.
-#
-  def find_pet_by_name(pet_shop, pet_name)
-    for pet in pet_shop[:pets][:name]
-        if name != pet[:name]
-          return nil
+    # def pet_by_breed (pet_shop, name) using a for loop function goes through hashes checking for "string" and stores finding, then stops at end of array.
+
+    def find_pet_by_name(pet_shop, pet_name)
+      breeds_array = []
+      for pet in pet_shop[:pets]
+        if pet_name == pet[:name]
+          return pet
+        end
       end
-  #   end
+      return breeds_array
+    end
+      # as above - function could be deleted as the above function covers both tests.
+
+  def find_pet_by_name(pet_shop, name)
+    for pet in pet_shop[:pets]
+      return pet if name == pet[:name]
+    end
+      return nil
+  end
+  # def pet_by_breed (pet_shop, name) using a for loop function goes through hashes checking for "string" and stores finding, then stops at end of array. In this case if name is not found then retrun "nil"
+
+  # def add_pet_to_stock(pet_shop, stock)
+  #   for pet in pet_shop[:pets][:new_pet] +=(num)
+  #     return count
   # end
 
-#   # def remove_pet_by_name(pet_shop, pet_name)
-#   #   for pet in pet_shop[:pets][:name].delete("Arthur")
-#   #
-#   #
-#   #   end
-#   #
-#   # end
-#
-#
-#
+  def customer_cash(customers, cash)
+    count = customer_cash[:customer][0][:cash].count
+  end
+
+
 # # end
