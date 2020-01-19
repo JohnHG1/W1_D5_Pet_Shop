@@ -127,3 +127,4 @@
    end
     return false
   end
+  # function tests by assessing customer funds against cost of pet to assess a true (can afford) or false (insufficent funds).
