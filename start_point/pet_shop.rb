@@ -6,7 +6,7 @@
   def total_cash(pet_shop)
     return pet_shop[:admin][:total_cash]
   end
-     # test checks functions returns correct total_cash by entering into two hashes.
+     # test checks functions returns correct total_cash by entering into two values.
 #
   def add_or_remove_cash(pet_shop, money)
     new_total_cash = pet_shop[:admin][:total_cash] += money
@@ -100,12 +100,12 @@
   def add_pet_to_stock(pet_shop, new_pet)
     pet_shop[:pets].push(new_pet)
   end
-
+  #
 
   def remove_customer_cash(customer, subtracted_money)
     customer[:cash] = customer[:cash] - subtracted_money
   end
-
+  #
 
   def customer_cash(customer)
     return customer[:cash]
@@ -116,10 +116,12 @@
   def customer_pet_count(customer)
    return customer[:pets].count
   end
+  #
 
   def add_pet_to_customer(customer, new_pet)
     customer[:pets].push(new_pet)
   end
+  #
 
   def customer_can_afford_pet(customer, new_pet)
     if customer[:cash] >= new_pet[:price]
