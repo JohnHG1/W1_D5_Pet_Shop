@@ -7,7 +7,7 @@
     return pet_shop[:admin][:total_cash]
   end
      # test checks functions returns correct total_cash by entering into two values.
-#
+
   def add_or_remove_cash(pet_shop, money)
     new_total_cash = pet_shop[:admin][:total_cash] += money
   end
@@ -22,16 +22,21 @@
     return sold = pet_shop[:admin][:pets_sold]
   end
 #     # test checks if function returns new value of number of pets sold by entering into an array within an array.
+## Feedback from Tutor highlight that line22 "return sold =" is not really necessary. It isn't wrong, but just extra keystorkes.
+#
 #
   def increase_pets_sold(pet_shop, num)
     return pet_shop[:admin][:pets_sold]+=(num)
   end
 #     # tests checks if function returns a new value that reflects an increase in pet sales.
+## Feedback from Tutor highlight that line29 "return" is not really necessary. It isn't wrong, but just extra keystorkes "pet_shop =".
+
 
   def stock_count(stock_count)
     return stock_count[:pets].count
   end
 #     # tests returns level of stock value by looking into array and utilising Ruby .count function
+## Feedback from Tutor highlights that line35 "(stock_count)" is not a useful description. Although we can call these anything, it is best practice to be as clear and desciptive so other engineers can understand our logic
 
   def pets_by_breed(pet_shop, breed)
     breeds_array = []
@@ -67,6 +72,7 @@
     return breeds_array
   end
     # def pet_by_breed (pet_shop, name) using a for loop function goes through hashes checking for "string" and stores finding, then stops at end of array.
+    ## Feedback from tutor highlight that there is no array necessary here (line66).
 
     def find_pet_by_name(pet_shop, pet_name)
       breeds_array = []
@@ -78,6 +84,8 @@
       return breeds_array
     end
       # as above - function could be commented-out as the previous function covers both tests.
+      ## Feedback from tutor highlight that there is no array necessary here (line66) and that on line72 it should read return nil.
+
 
   def find_pet_by_name(pet_shop, name)
     for pet in pet_shop[:pets]
